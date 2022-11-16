@@ -1,0 +1,16 @@
+[package]
+name = "tui-template"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = ["crossterm"]
+crossterm = ["dep:crossterm", "tui/crossterm"]
+
+[dependencies]
+tui = { version = "0.19", default-features = false }
+crossterm = { version = "0.25", optional = true }
+tui-textarea = { version = "0.2.0" }
+
